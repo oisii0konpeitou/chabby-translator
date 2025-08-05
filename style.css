@@ -1,9 +1,16 @@
+/* ======================
+   全体設定
+====================== */
 body {
-  font-family: "Segoe UI", sans-serif;
+  font-family: 'Noto Sans JP', 'Segoe UI', sans-serif;
   margin: 0;
   background-color: #f1f3f4;
 }
 
+
+/* ======================
+   ヘッダー
+====================== */
 header {
   display: flex;
   justify-content: space-between;
@@ -27,11 +34,16 @@ header {
   border: 2px solid white;
 }
 
+
+/* ======================
+   メイン翻訳エリア
+====================== */
 .main {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 10px;
-  margin-top: 30px;
+  margin-top: 100px;
 }
 
 .box {
@@ -56,7 +68,9 @@ header {
 }
 
 .textarea {
+  box-sizing: border-box;
   flex-grow: 1;
+  width: 100%;
   padding: 10px;
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 22px;
@@ -68,34 +82,54 @@ header {
   outline: none;
 }
 
-.bottom-bar {
-  display: flex;
-  justify-content: center;
-  margin: 20px 0 10px;
-}
 
-.button {
-  padding: 10px 24px;
-  font-size: 16px;
-  color: white;
-  background-color: #D32F2F;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.button:hover {
-  background-color: #C62828;
-}
-
+/* ======================
+   フッターメッセージ
+====================== */
 .footer-message {
-  margin-top: 55px;
-  padding: 20px 30px 20px 20px;
+  margin-top: 60px;
+  padding: 14px;
   text-align: center;
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 700;
   font-family: 'M PLUS Rounded 1c', sans-serif;
   color: #D32F2F;
   background-color: #fff3f3;
   border-top: 2px solid #E53935;
+}
+
+
+/* ======================
+   言語切り替えボタン
+====================== */
+.swap-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+#swap-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background-color: #f1f3f4;
+  font-size: 24px;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.3s ease;
+  outline: none;
+  box-shadow: none;
+}
+
+#swap-button:hover {
+  background-color: #dcdedf;
+}
+
+#swap-button.rotated {
+  transform: rotate(180deg);
 }
